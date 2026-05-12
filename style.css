@@ -308,6 +308,17 @@ body {
 }
 .content-card.active { display: block; }
 
+.log-card {
+    background: var(--content-bg);
+    padding: 40px 80px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.log-card.active { display: block; }
 
 /* 캐릭터 이미지 목록 */
 .character-section {

@@ -94,7 +94,7 @@
                  단, 같은 id를 가진 <section>이 아래에 반드시 있어야 합니다 -->
             <nav class="nav-tabs">
                 <button class="nav-btn active" onclick="openTab('home',   this)">Home</button>
-                <button class="nav-btn"        onclick="openTab('Backup', this)">Backup</button>
+                <button class="nav-btn"        onclick="openTab('VOID', this)">VOID</button>
             </nav>
 
 
@@ -128,7 +128,14 @@
                     캐릭터 이미지의 onclick도 같은 id로 맞춰주세요.
                     ==================================================== -->
                 <section id="char-ho1" class="content-card">
-                    <h2>HO 1</h2>
+                    <h2 style="text-align: center;">후지모리 시엔、 【신입 형사】。</h2>
+
+                    <p style="text-align: center; color: var(--text-sub); font-style: italic;">
+                        <br>당신은 올해 형사가 된 지 얼마 안 된 신입이다.<br>
+                        이렇게 젊은 나이에 발탁된 것은 굉장히 이례적인 일이다.<br>
+                    </p>
+
+                    <div class="divider-dots">• • •</div>
 
                     <div class="profile-overview">
                         <!-- 캐릭터 스탠딩 이미지 -->
@@ -139,29 +146,29 @@
                                 quote-mark 색상: style="color: ..." 값을 바꾸면 됩니다 -->
                             <div class="char-quote">
                                 <span class="quote-mark" style="color: var(--light-color);">"</span>
-                                <p class="quote-text">한마디</p>
+                                <p class="quote-text">처음뵙겠습니다. 시엔입니다.<br>잘 부탁드립니다.</p>
                             </div>
 
-                            <div class="divider-dots">• • •</div>
+                            <p><br></p>
 
                             <!-- 기본 정보 테이블
                                 행 추가: <div class="info-row">...</div> 복사 -->
                             <div class="info-table">
                                 <div class="info-row">
-                                    <span class="info-label">이름</span>
-                                    <span class="info-value">여기에 이름</span>
-                                </div>
-                                <div class="info-row">
-                                    <span class="info-label">직업</span>
-                                    <span class="info-value">여기에 직업</span>
-                                </div>
-                                <div class="info-row">
                                     <span class="info-label">나이</span>
-                                    <span class="info-value">여기에 나이</span>
+                                    <span class="info-value">22세</span>
                                 </div>
                                 <div class="info-row">
-                                    <span class="info-label">거주지</span>
-                                    <span class="info-value">여기에 거주지</span>
+                                    <span class="info-label">무기</span>
+                                    <span class="info-value">전자일본도</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">특기</span>
+                                    <span class="info-value">머리 쓰는 것, 검도</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">특징</span>
+                                    <span class="info-value">예의 바름, 메모를 많이 한다.</span>
                                 </div>
                             </div>
 
@@ -171,7 +178,9 @@
                         </div>
                     </div>
 
-                    <div class="divider-dots">• • •</div>
+                    <div class="log-item"></div>
+
+                    <p><br><br></p>
 
                     <!-- ================================================
                         레이더 차트 + 성격 바 그래프
@@ -205,6 +214,8 @@
                         <div class="stat-group" style="--bar-color: var(--accent-color);">
                             <h3>Personality</h3>
 
+                            <p style="color: var(--text-sub); font-size: 0.8rem">#친절한 #상냥함 #진지함</p>
+
                             <div class="stat-item">
                                 <div class="stat-header"><span>내향</span><span>외향</span></div>
                                 <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:80%;"></div></div>
@@ -222,24 +233,11 @@
                                 <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:70%;"></div></div>
                             </div>
                         </div>
+
                     </div>
                     <!-- /stats-wrapper -->
 
-                    <div class="divider-dots">• • •</div>
-
-                    <!-- 백스토리
-                        분기점 추가: <details>...</details> 블록 복사 -->
-                    <h2>백스토리</h2>
-                    <p class="section-intro">들어가기 전 개요 텍스트</p>
-
-                    <details>
-                        <summary>분기점 1</summary>
-                        <div class="details-content">내용</div>
-                    </details>
-                    <details>
-                        <summary>분기점 2</summary>
-                        <div class="details-content">내용</div>
-                    </details>
+                    <p><br><br></p>
 
                 </section>
                 <!-- /char-ho1 -->
@@ -249,33 +247,435 @@
                 <div class="character-section active">
                     <img src="images/Ho2.png" class="character-img" alt="캐릭터 2" title="사츠키" onclick="openTab('char-ho2')">
                 </div>
+
+                <section id="char-ho2" class="content-card">
+                    <h2 style="text-align: center;">후지모리 시엔、 【신입 형사】。</h2>
+
+                    <p style="text-align: center; color: var(--text-sub); font-style: italic;">
+                        <br>당신은 올해 형사가 된 지 얼마 안 된 신입이다.<br>
+                        이렇게 젊은 나이에 발탁된 것은 굉장히 이례적인 일이다.<br>
+                    </p>
+
+                    <div class="divider-dots">• • •</div>
+
+                    <div class="profile-overview">
+                        <!-- 캐릭터 스탠딩 이미지 -->
+                        <img src="images/Ho2Standing.png" alt="Ho 2" class="main-profile-img">
+
+                        <div class="profile-info-wrapper">
+                            <!-- 인용구
+                                quote-mark 색상: style="color: ..." 값을 바꾸면 됩니다 -->
+                            <div class="char-quote">
+                                <span class="quote-mark" style="color: var(--light-color);">"</span>
+                                <p class="quote-text">처음뵙겠습니다. 시엔입니다.<br>잘 부탁드립니다.</p>
+                            </div>
+
+                            <p><br></p>
+
+                            <!-- 기본 정보 테이블
+                                행 추가: <div class="info-row">...</div> 복사 -->
+                            <div class="info-table">
+                                <div class="info-row">
+                                    <span class="info-label">나이</span>
+                                    <span class="info-value">22세</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">무기</span>
+                                    <span class="info-value">전자일본도</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">특기</span>
+                                    <span class="info-value">머리 쓰는 것, 검도</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">특징</span>
+                                    <span class="info-value">예의 바름, 메모를 많이 한다.</span>
+                                </div>
+                            </div>
+
+                            <!-- 탐사자 시트 링크 -->
+                            <a href="https://docs.google.com/spreadsheets/d/1rPTxv049iuMUUKpVDG7vg5rxS5xNHaWBblEH1r87nVk/preview#gid=636004964" 
+                            class="link-btn" target="_blank">시트 바로가기</a>
+                        </div>
+                    </div>
+
+                    <div class="log-item"></div>
+
+                    <p><br><br></p>
+
+                    <!-- ================================================
+                        레이더 차트 + 성격 바 그래프
+
+                        data-stats : 근력, 건강, 크기, 민첩, 외모, 지능, 정신, 교육
+                                    0~100 사이 숫자 8개를 쉼표로 구분해 입력
+                                    꼭짓점에 마우스를 올리면 수치가 표시됩니다.
+                        data-color : 차트 색상 (R, G, B)
+                        ================================================ -->
+                    <div class="stats-wrapper"
+                        data-stats="60, 70, 70, 50, 50, 80, 70, 60"
+                        data-color="255, 202, 22">
+
+                        <!-- 레이더 차트 SVG — 건드리지 않아도 됩니다 -->
+                        <div class="radar-chart-container">
+                            <svg viewBox="0 0 200 200" class="radar-chart">
+                                <g class="chart-background"></g>
+                                <polygon points="" class="chart-polygon data-area"></polygon>
+                                <g class="chart-dots"></g>
+                                <g class="chart-labels"></g>
+                                <g class="chart-tooltip" style="display:none;">
+                                    <rect class="tooltip-bg" rx="3" ry="3"></rect>
+                                    <text class="tooltip-text"></text>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <!-- 성격 바 그래프
+                            --bar-color : 바 전체 색상 (이 값만 바꾸면 모든 바에 적용)
+                            width       : 0% = 왼쪽 극단 / 100% = 오른쪽 극단 -->
+                        <div class="stat-group" style="--bar-color: var(--accent-color);">
+                            <h3>Personality</h3>
+
+                            <p style="color: var(--text-sub); font-size: 0.8rem">#친절한 #상냥함 #진지함</p>
+
+                            <div class="stat-item">
+                                <div class="stat-header"><span>내향</span><span>외향</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:80%;"></div></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-header"><span>감각</span><span>직관</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:25%;"></div></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-header"><span>사고</span><span>감정</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:30%;"></div></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-header"><span>판단</span><span>인식</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:70%;"></div></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /stats-wrapper -->
+
+                    <p><br><br></p>
+
+                </section>
+
+                <!-- /char-ho2 -->
             
                 <div class="character-section active">
                     <img src="images/Ho3.png" class="character-img" alt="캐릭터 3" title="카라카미 텟세이" onclick="openTab('char-ho3')">
                 </div>
 
+                <!-- /char-ho3 -->
+
+                <section id="char-ho3" class="content-card">
+                    <h2 style="text-align: center;">후지모리 시엔、 【신입 형사】。</h2>
+
+                    <p style="text-align: center; color: var(--text-sub); font-style: italic;">
+                        <br>당신은 올해 형사가 된 지 얼마 안 된 신입이다.<br>
+                        이렇게 젊은 나이에 발탁된 것은 굉장히 이례적인 일이다.<br>
+                    </p>
+
+                    <div class="divider-dots">• • •</div>
+
+                    <div class="profile-overview">
+                        <!-- 캐릭터 스탠딩 이미지 -->
+                        <img src="images/Ho3Standing.png" alt="Ho 3" class="main-profile-img">
+
+                        <div class="profile-info-wrapper">
+                            <!-- 인용구
+                                quote-mark 색상: style="color: ..." 값을 바꾸면 됩니다 -->
+                            <div class="char-quote">
+                                <span class="quote-mark" style="color: var(--light-color);">"</span>
+                                <p class="quote-text">처음뵙겠습니다. 시엔입니다.<br>잘 부탁드립니다.</p>
+                            </div>
+
+                            <p><br></p>
+
+                            <!-- 기본 정보 테이블
+                                행 추가: <div class="info-row">...</div> 복사 -->
+                            <div class="info-table">
+                                <div class="info-row">
+                                    <span class="info-label">나이</span>
+                                    <span class="info-value">22세</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">무기</span>
+                                    <span class="info-value">전자일본도</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">특기</span>
+                                    <span class="info-value">머리 쓰는 것, 검도</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">특징</span>
+                                    <span class="info-value">예의 바름, 메모를 많이 한다.</span>
+                                </div>
+                            </div>
+
+                            <!-- 탐사자 시트 링크 -->
+                            <a href="https://docs.google.com/spreadsheets/d/1rPTxv049iuMUUKpVDG7vg5rxS5xNHaWBblEH1r87nVk/preview#gid=636004964" 
+                            class="link-btn" target="_blank">시트 바로가기</a>
+                        </div>
+                    </div>
+
+                    <div class="log-item"></div>
+
+                    <p><br><br></p>
+
+                    <!-- ================================================
+                        레이더 차트 + 성격 바 그래프
+
+                        data-stats : 근력, 건강, 크기, 민첩, 외모, 지능, 정신, 교육
+                                    0~100 사이 숫자 8개를 쉼표로 구분해 입력
+                                    꼭짓점에 마우스를 올리면 수치가 표시됩니다.
+                        data-color : 차트 색상 (R, G, B)
+                        ================================================ -->
+                    <div class="stats-wrapper"
+                        data-stats="60, 70, 70, 50, 50, 80, 70, 60"
+                        data-color="255, 202, 22">
+
+                        <!-- 레이더 차트 SVG — 건드리지 않아도 됩니다 -->
+                        <div class="radar-chart-container">
+                            <svg viewBox="0 0 200 200" class="radar-chart">
+                                <g class="chart-background"></g>
+                                <polygon points="" class="chart-polygon data-area"></polygon>
+                                <g class="chart-dots"></g>
+                                <g class="chart-labels"></g>
+                                <g class="chart-tooltip" style="display:none;">
+                                    <rect class="tooltip-bg" rx="3" ry="3"></rect>
+                                    <text class="tooltip-text"></text>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <!-- 성격 바 그래프
+                            --bar-color : 바 전체 색상 (이 값만 바꾸면 모든 바에 적용)
+                            width       : 0% = 왼쪽 극단 / 100% = 오른쪽 극단 -->
+                        <div class="stat-group" style="--bar-color: var(--accent-color);">
+                            <h3>Personality</h3>
+
+                            <p style="color: var(--text-sub); font-size: 0.8rem">#친절한 #상냥함 #진지함</p>
+
+                            <div class="stat-item">
+                                <div class="stat-header"><span>내향</span><span>외향</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:80%;"></div></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-header"><span>감각</span><span>직관</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:25%;"></div></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-header"><span>사고</span><span>감정</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:30%;"></div></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-header"><span>판단</span><span>인식</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:70%;"></div></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /stats-wrapper -->
+
+                    <p><br><br></p>
+
+                </section>
+
                 <div class="character-section active">
                     <img src="images/Ho4.png" class="character-img" alt="캐릭터 4" title="히마리" onclick="openTab('char-ho4')">
                 </div>
+
+                <section id="char-ho4" class="content-card">
+                    <h2 style="text-align: center;">후지모리 시엔、 【신입 형사】。</h2>
+
+                    <p style="text-align: center; color: var(--text-sub); font-style: italic;">
+                        <br>당신은 올해 형사가 된 지 얼마 안 된 신입이다.<br>
+                        이렇게 젊은 나이에 발탁된 것은 굉장히 이례적인 일이다.<br>
+                    </p>
+
+                    <div class="divider-dots">• • •</div>
+
+                    <div class="profile-overview">
+                        <!-- 캐릭터 스탠딩 이미지 -->
+                        <img src="images/Ho4Standing.png" alt="Ho 4" class="main-profile-img">
+
+                        <div class="profile-info-wrapper">
+                            <!-- 인용구
+                                quote-mark 색상: style="color: ..." 값을 바꾸면 됩니다 -->
+                            <div class="char-quote">
+                                <span class="quote-mark" style="color: var(--light-color);">"</span>
+                                <p class="quote-text">처음뵙겠습니다. 시엔입니다.<br>잘 부탁드립니다.</p>
+                            </div>
+
+                            <p><br></p>
+
+                            <!-- 기본 정보 테이블
+                                행 추가: <div class="info-row">...</div> 복사 -->
+                            <div class="info-table">
+                                <div class="info-row">
+                                    <span class="info-label">나이</span>
+                                    <span class="info-value">22세</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">무기</span>
+                                    <span class="info-value">전자일본도</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">특기</span>
+                                    <span class="info-value">머리 쓰는 것, 검도</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">특징</span>
+                                    <span class="info-value">예의 바름, 메모를 많이 한다.</span>
+                                </div>
+                            </div>
+
+                            <!-- 탐사자 시트 링크 -->
+                            <a href="https://docs.google.com/spreadsheets/d/1rPTxv049iuMUUKpVDG7vg5rxS5xNHaWBblEH1r87nVk/preview#gid=636004964" 
+                            class="link-btn" target="_blank">시트 바로가기</a>
+                        </div>
+                    </div>
+
+                    <div class="log-item"></div>
+
+                    <p><br><br></p>
+
+                    <!-- ================================================
+                        레이더 차트 + 성격 바 그래프
+
+                        data-stats : 근력, 건강, 크기, 민첩, 외모, 지능, 정신, 교육
+                                    0~100 사이 숫자 8개를 쉼표로 구분해 입력
+                                    꼭짓점에 마우스를 올리면 수치가 표시됩니다.
+                        data-color : 차트 색상 (R, G, B)
+                        ================================================ -->
+                    <div class="stats-wrapper"
+                        data-stats="60, 70, 70, 50, 50, 80, 70, 60"
+                        data-color="255, 202, 22">
+
+                        <!-- 레이더 차트 SVG — 건드리지 않아도 됩니다 -->
+                        <div class="radar-chart-container">
+                            <svg viewBox="0 0 200 200" class="radar-chart">
+                                <g class="chart-background"></g>
+                                <polygon points="" class="chart-polygon data-area"></polygon>
+                                <g class="chart-dots"></g>
+                                <g class="chart-labels"></g>
+                                <g class="chart-tooltip" style="display:none;">
+                                    <rect class="tooltip-bg" rx="3" ry="3"></rect>
+                                    <text class="tooltip-text"></text>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <!-- 성격 바 그래프
+                            --bar-color : 바 전체 색상 (이 값만 바꾸면 모든 바에 적용)
+                            width       : 0% = 왼쪽 극단 / 100% = 오른쪽 극단 -->
+                        <div class="stat-group" style="--bar-color: var(--accent-color);">
+                            <h3>Personality</h3>
+
+                            <p style="color: var(--text-sub); font-size: 0.8rem">#친절한 #상냥함 #진지함</p>
+
+                            <div class="stat-item">
+                                <div class="stat-header"><span>내향</span><span>외향</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:80%;"></div></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-header"><span>감각</span><span>직관</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:25%;"></div></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-header"><span>사고</span><span>감정</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:30%;"></div></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-header"><span>판단</span><span>인식</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:70%;"></div></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /stats-wrapper -->
+
+                    <p><br><br></p>
+
+                </section>
+                
+                <!-- /char-ho4 -->
             </section>
 
             <!-- ====================================================
-                 [탭] Backup — 로그 백업
+                 [탭] scenario name — 로그 백업
 
-                 코코포리아에서 다운받은 html 파일을 열어
-                 [main] 태그가 포함된 텍스트를 아래에 붙여넣으세요.
-                 형식: [main] 이름 : 대사내용
+                    id: scenario title
+
 
                  챕터 추가: <details>...</details> 블록 복사
                  ==================================================== -->
-            <section id="Backup" class="content-card">
-                <h2>로그 백업</h2>
 
-                <details> <summary>HO1&HO2 페어도입</summary>
+            <section id="VOID" class="content-card">
+
+                <p><br></p>
+
+                <!-- 시나리오 제목 -->
+                <h1 style="display: inline; font-size: 3em" href="https://booth.pm/ja/items/2907962">VOID</h1>
+
+                <div class="divider-dots" style="display: inline; padding-inline: 38% 13%;">* * *</div>
+
+                <!-- 시나리오 링크 -->
+                <a href="https://booth.pm/ja/items/2907962" class="link-btn" target="_blank" style="background-color: #f9f9f9; color: var(--text-sub);">booth</a>
+
+                <p><br><br></p>
+
+                <!-- 세션 카드 -->
+                <img src="images/VOID_card.png" style="width:100%; height:auto;" alt="세션 카드">
+
+                <p><br><br></p>
+
+                <!-- 시나리오 개요 -->
+                <p style="text-align: center;">제군은 「선택」을 강요당하고 있다. <br>
+                    과학 기술에 의한「승리 가능성」인가, <br>
+                    아니면 그것을 포기함으로써 얻는 「확실한 패배」인가를. <br><br>
+                </p>
+
+
+            </section>
+            
+            <!-- 로그 카드 섹션
+                 scenario 속성은 탭 전환 JS에서 참조하는 값입니다.
+                 블록 별로 섹션을 나누고 scenario="시나리오명"으로 설정하세요. -->
+            <section scenario="VOID" class="log-card">
+                <h2>도입</h2>
+
+                <p><br>비공개<br><br></p>
+
+                <details> <summary>HO1 개인도입</summary>
+                    <div class="details-content" data-file="logs\introHO1.txt"></div>
+                </details>
+
+                <details> <summary>HO2 개인도입</summary>
+                    <div class="details-content" data-file="logs\introHO2.txt"></div>
+                </details>
+
+                <details> <summary>HO3 개인도입</summary>
+                    <div class="details-content" data-file="logs\introHO3.txt"></div>
+                </details>
+                
+                <details> <summary>HO4 개인도입</summary>
+                    <div class="details-content" data-file="logs\introHO4.txt"></div>
+                </details>
+
+                <div class="divider-dots">• • •</div>
+
+                <p><br>공개<br><br></p>
+
+
+                <details> <summary>HO12 페어도입</summary>
                     <div class="details-content" data-file="logs\introHO12.txt"></div>
                 </details>
 
-                <details> <summary>HO3&HO4 페어도입</summary>
+                <details> <summary>HO34 페어도입</summary>
                     <div class="details-content" data-file="logs\introHO34.txt"></div>
                 </details>
 
@@ -284,44 +684,8 @@
                     <div class="details-content" data-file="logs\intro.txt"></div>
                 </details>
 
-
             </section>
 
-
-            <!-- ====================================================
-                 [탭] NPC — 관계 인물 카드 그리드
-
-                 카드 추가: <div class="relation-card">...</div> 복사
-                 data-relation 값 → 배지 색상:
-                   "적" "아군" "중립" "의뢰인"
-                 새 유형은 JS의 colorMap에 추가하세요.
-                 ==================================================== -->
-            <section id="NPC" class="content-card">
-                <h2>NPC</h2>
-
-                <div class="relation-grid">
-
-                    <div class="relation-card" data-relation="적">
-                        <!-- 이미지: images/ 폴더 경로로 교체하세요 -->
-                        <img src="https://via.placeholder.com/100" class="relation-avatar" alt="적 예시">
-                        <div class="relation-name">적 예시</div>
-                        <div class="relation-desc">설명 예시</div>
-                    </div>
-
-                    <div class="relation-card" data-relation="의뢰인">
-                        <img src="https://via.placeholder.com/100" class="relation-avatar" alt="의뢰인 예시">
-                        <div class="relation-name">의뢰인 예시</div>
-                        <div class="relation-desc">설명 예시</div>
-                    </div>
-
-                    <div class="relation-card" data-relation="중립">
-                        <img src="https://via.placeholder.com/100" class="relation-avatar" alt="중립 예시">
-                        <div class="relation-name">중립 예시</div>
-                        <div class="relation-desc">설명 예시</div>
-                    </div>
-
-                </div>
-            </section>
 
         </main>
         <!-- /main-content -->
@@ -349,6 +713,14 @@
        ---------------------------------------------------------- */
     function openTab(tabName, btnElement = null) {
         document.querySelectorAll('.content-card').forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.log-card').forEach(x => x.classList.remove('active'));
+        document.querySelectorAll('.log-card').forEach(x => {
+            if (x.getAttribute('scenario') === tabName) {
+                x.classList.add('active');
+            } else {
+                x.classList.remove('active');
+            }
+        });
         document.querySelectorAll('.character-section').forEach(e => e.classList.remove('active'));
         document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
         const target = document.getElementById(tabName);
@@ -455,12 +827,21 @@
     async function parseAllLogs() {
         // ↓ 캐릭터별 이름 색상, 로그 내의 이름과 띄어쓰기까지 동일해야 인식합니다
         const charColors = {
-        "후지모리 시엔"   : "#4d9c29",
-        "사츠키"   : "#34610a",
-        "카라카미 텟세이"   : "#1b3106",
-        "히마리"   : "#294d0b",
-        "GM"     : "#555555",
-        "system" : "#494949"
+        "후지모리 시엔"   : "#673ab7",
+        "아마기 시엔"   : "#673ab7",
+        "사츠키"   : "#03a9f4",
+        "카라카미 텟세이"   : "#607d8b",
+        "히마리"   : "#cddc39",
+        "아카보시 토오야" : "#e91e63",
+        "아오키 레이토" : "#3f51b5",
+        "쿠로다 야시로" : "#3c4041",
+        "키우미 나츠오" : "#ffc107",
+        "쿄우" : "#ffffff",
+        "시라세 쿄우가" : "#ffffff",
+        "이치하" : "#ff57e9",
+        "레미" : "#783ebe",
+        "코코로" : "#ffffff",
+        "시라세 코코로" : "#ffffff"
         };
         
         const containers = document.querySelectorAll('.details-content');
