@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 브라우저 탭에 표시되는 제목 -->
+    <title>보(카로)이드</title>
+    <!-- SNS/메신저 공유 시 표시되는 설명 -->
+    <meta name="description" content="페이지 이름">
+
+    <!-- 폰트 불러오기 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- 스타일시트 연결 (같은 폴더의 style.css) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 모바일 전용: 사이드바 토글 버튼 & 오버레이 -->
+<button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="사이드바 열기">☰</button>
+<div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+<div class="container">
+
+    <!-- ============================================================
+         헤더 배너 이미지
+         images/ 폴더 안의 파일명을 바꾸면 이미지 교체 가능
+         ============================================================ -->
+    <div class="header-banner">
+        <img src="images/VOcaloID_nanagom.png" alt="Header Banner">
+    </div>
+
+    <div class="content-row">
+
+        <!-- ============================================================
+             왼쪽 사이드바
+             ============================================================ -->
+        <div class="sidebar-column">
+            <aside class="sidebar">
+
+                <!-- 캐릭터 이름 -->
+                <h1 class="char-name">보(카로)이드</h1>
+
+                <!-- 사이드바 소개 텍스트 — 내용만 바꾸면 됩니다 -->
+                <p class="sidebar-sub">since 2026.03.06</p>
+
+                <div class="divider-dots"> • • •</div>
+
+                <h3 style="margin: 5px;">VOID</h3>
+                <p class="sidebar-sub2">26.03.06-26.05.08</p>
+
+                <!-- 링크 버튼
+                     href = 이동할 URL, 버튼 텍스트도 바꿀 수 있습니다 -->
+                <a href="https://ccfolia.com/rooms/VRUyI7uz1" class="link-btn" target="_blank">ROOMLINK</a>
+
+
+            </aside>
+
+            <!-- 유튜브 뮤직 플레이어
+                     URL의 영상 ID(AN1RJF55NXI 부분)만 바꾸면 곡 교체 가능
+                     예: https://youtu.be/XXXXXXXXXX → XXXXXXXXXX 부분을 복사 -->
+                <div class="music-player">
+                    <iframe
+                        class="youtube-frame"
+                        src="https://www.youtube.com/embed/rOU4YiuaxAM?controls=0&modestbranding=1"
+                        title="YouTube video player"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="music-info">
+                        <!-- 곡 제목과 아티스트명 -->
+                        <div class="music-title">「Hello,world!」</div>
+                        <div class="music-artist">BUMP OF CHICKEN</div>
+                    </div>
+                </div>
+
+            <!-- ============================================================
+                 캘린더
+                 일정 추가: 아래 JS의 events 객체에 입력합니다.
+                 형식: "YYYY-MM-DD": ["일정 이름", "시간"]
+                 ============================================================ -->
+            <div class="calendar" id="calendar"></div>
+
+        </div>
+        <!-- /sidebar-column -->
+
+        <!-- ============================================================
+             오른쪽 메인 콘텐츠 영역
+             ============================================================ -->
+        <main class="main-content">
+
+            <!-- 탭 네비게이션
+                 추가: <button class="nav-btn" onclick="openTab('섹션ID', this)">이름</button>
+                 단, 같은 id를 가진 <section>이 아래에 반드시 있어야 합니다 -->
+            <nav class="nav-tabs">
+                <button class="nav-btn active" onclick="openTab('home',   this)">Home</button>
+                <button class="nav-btn"        onclick="openTab('Backup', this)">Backup</button>
+            </nav>
+
+
+            <!-- ====================================================
+                 [탭] Home — 메인 일러스트
+                 ==================================================== -->
+            <section id="home" class="content-card active">
+                <h2>VOcaloID</h2>
+                <!-- 이미지 교체: images/main.png 파일을 바꾸거나 경로를 수정하세요 -->
+                <img src="images/VOcaloID_card.png" style="width:100%; height:auto;" alt="메인 일러스트">
+            </section>
+
+                <!-- ============================================================
+                    캐릭터 이미지 목록
+                    클릭하면 해당 캐릭터 상세 섹션으로 이동합니다.
+                    - src      : 이미지 경로
+                    - title    : 마우스오버 시 표시되는 이름
+                    - onclick  : 열릴 섹션의 id (아래 section id와 일치해야 함)
+                    추가하려면 <img> 한 줄을 복사해 수정하세요.
+                    ============================================================ -->
+
+            <div class="character-section active">
+                <img src="images/Ho1.png" class="character-img" alt="캐릭터 1" title="후지모리 시엔" onclick="openTab('char-ho1')">
+            </div>
+
+                <!-- ====================================================
+                    [캐릭터 이미지 클릭 전용] 캐릭터 상세 페이지
+                    왼쪽 캐릭터 이미지를 클릭하면 열립니다.
+                    추가하려면 이 섹션 전체를 복사하고
+                    id="char-ho1" → id="char-ho5" 등으로 변경 후
+                    캐릭터 이미지의 onclick도 같은 id로 맞춰주세요.
+                    ==================================================== -->
+                <section id="char-ho1" class="content-card">
+                    <h2>HO 1</h2>
+
+                    <div class="profile-overview">
+                        <!-- 캐릭터 스탠딩 이미지 -->
+                        <img src="images/Ho1Standing.png" alt="Ho 1" class="main-profile-img">
+
+                        <div class="profile-info-wrapper">
+                            <!-- 인용구
+                                quote-mark 색상: style="color: ..." 값을 바꾸면 됩니다 -->
+                            <div class="char-quote">
+                                <span class="quote-mark" style="color: var(--light-color);">"</span>
+                                <p class="quote-text">한마디</p>
+                            </div>
+
+                            <div class="divider-dots">• • •</div>
+
+                            <!-- 기본 정보 테이블
+                                행 추가: <div class="info-row">...</div> 복사 -->
+                            <div class="info-table">
+                                <div class="info-row">
+                                    <span class="info-label">이름</span>
+                                    <span class="info-value">여기에 이름</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">직업</span>
+                                    <span class="info-value">여기에 직업</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">나이</span>
+                                    <span class="info-value">여기에 나이</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="info-label">거주지</span>
+                                    <span class="info-value">여기에 거주지</span>
+                                </div>
+                            </div>
+
+                            <!-- 탐사자 시트 링크 -->
+                            <a href="https://docs.google.com/spreadsheets/d/1rPTxv049iuMUUKpVDG7vg5rxS5xNHaWBblEH1r87nVk/preview#gid=636004964" 
+                            class="link-btn" target="_blank">시트 바로가기</a>
+                        </div>
+                    </div>
+
+                    <div class="divider-dots">• • •</div>
+
+                    <!-- ================================================
+                        레이더 차트 + 성격 바 그래프
+
+                        data-stats : 근력, 건강, 크기, 민첩, 외모, 지능, 정신, 교육
+                                    0~100 사이 숫자 8개를 쉼표로 구분해 입력
+                                    꼭짓점에 마우스를 올리면 수치가 표시됩니다.
+                        data-color : 차트 색상 (R, G, B)
+                        ================================================ -->
+                    <div class="stats-wrapper"
+                        data-stats="60, 70, 70, 50, 50, 80, 70, 60"
+                        data-color="255, 202, 22">
+
+                        <!-- 레이더 차트 SVG — 건드리지 않아도 됩니다 -->
+                        <div class="radar-chart-container">
+                            <svg viewBox="0 0 200 200" class="radar-chart">
+                                <g class="chart-background"></g>
+                                <polygon points="" class="chart-polygon data-area"></polygon>
+                                <g class="chart-dots"></g>
+                                <g class="chart-labels"></g>
+                                <g class="chart-tooltip" style="display:none;">
+                                    <rect class="tooltip-bg" rx="3" ry="3"></rect>
+                                    <text class="tooltip-text"></text>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <!-- 성격 바 그래프
+                            --bar-color : 바 전체 색상 (이 값만 바꾸면 모든 바에 적용)
+                            width       : 0% = 왼쪽 극단 / 100% = 오른쪽 극단 -->
+                        <div class="stat-group" style="--bar-color: var(--accent-color);">
+                            <h3>Personality</h3>
+
+                            <div class="stat-item">
+                                <div class="stat-header"><span>내향</span><span>외향</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:80%;"></div></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-header"><span>감각</span><span>직관</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:25%;"></div></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-header"><span>사고</span><span>감정</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:30%;"></div></div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-header"><span>판단</span><span>인식</span></div>
+                                <div class="stat-bar-bg"><div class="stat-bar-fill" style="width:70%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /stats-wrapper -->
+
+                    <div class="divider-dots">• • •</div>
+
+                    <!-- 백스토리
+                        분기점 추가: <details>...</details> 블록 복사 -->
+                    <h2>백스토리</h2>
+                    <p class="section-intro">들어가기 전 개요 텍스트</p>
+
+                    <details>
+                        <summary>분기점 1</summary>
+                        <div class="details-content">내용</div>
+                    </details>
+                    <details>
+                        <summary>분기점 2</summary>
+                        <div class="details-content">내용</div>
+                    </details>
+
+                </section>
+                <!-- /char-ho1 -->
+
+                <!-- char-ho2, ho3, ho4는 위 섹션을 복사해 id만 바꿔 추가하세요 -->
+
+                <div class="character-section active">
+                    <img src="images/Ho2.png" class="character-img" alt="캐릭터 2" title="사츠키" onclick="openTab('char-ho2')">
+                </div>
+            
+                <div class="character-section active">
+                    <img src="images/Ho3.png" class="character-img" alt="캐릭터 3" title="카라카미 텟세이" onclick="openTab('char-ho3')">
+                </div>
+
+                <div class="character-section active">
+                    <img src="images/Ho4.png" class="character-img" alt="캐릭터 4" title="히마리" onclick="openTab('char-ho4')">
+                </div>
+            </section>
+
+            <!-- ====================================================
+                 [탭] Backup — 로그 백업
+
+                 코코포리아에서 다운받은 html 파일을 열어
+                 [main] 태그가 포함된 텍스트를 아래에 붙여넣으세요.
+                 형식: [main] 이름 : 대사내용
+
+                 챕터 추가: <details>...</details> 블록 복사
+                 ==================================================== -->
+            <section id="Backup" class="content-card">
+                <h2>로그 백업</h2>
+
+                <details> <summary>HO1&HO2 페어도입</summary>
+                    <div class="details-content" data-file="logs\introHO12.txt"></div>
+                </details>
+
+                <details> <summary>HO3&HO4 페어도입</summary>
+                    <div class="details-content" data-file="logs\introHO34.txt"></div>
+                </details>
+
+
+                <details> <summary>단체도입</summary>
+                    <div class="details-content" data-file="logs\intro.txt"></div>
+                </details>
+
+
+            </section>
+
+
+            <!-- ====================================================
+                 [탭] NPC — 관계 인물 카드 그리드
+
+                 카드 추가: <div class="relation-card">...</div> 복사
+                 data-relation 값 → 배지 색상:
+                   "적" "아군" "중립" "의뢰인"
+                 새 유형은 JS의 colorMap에 추가하세요.
+                 ==================================================== -->
+            <section id="NPC" class="content-card">
+                <h2>NPC</h2>
+
+                <div class="relation-grid">
+
+                    <div class="relation-card" data-relation="적">
+                        <!-- 이미지: images/ 폴더 경로로 교체하세요 -->
+                        <img src="https://via.placeholder.com/100" class="relation-avatar" alt="적 예시">
+                        <div class="relation-name">적 예시</div>
+                        <div class="relation-desc">설명 예시</div>
+                    </div>
+
+                    <div class="relation-card" data-relation="의뢰인">
+                        <img src="https://via.placeholder.com/100" class="relation-avatar" alt="의뢰인 예시">
+                        <div class="relation-name">의뢰인 예시</div>
+                        <div class="relation-desc">설명 예시</div>
+                    </div>
+
+                    <div class="relation-card" data-relation="중립">
+                        <img src="https://via.placeholder.com/100" class="relation-avatar" alt="중립 예시">
+                        <div class="relation-name">중립 예시</div>
+                        <div class="relation-desc">설명 예시</div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+        <!-- /main-content -->
+
+    </div>
+    <!-- /content-row -->
+
+    <!-- 푸터 — 문구만 바꾸면 됩니다 -->
+    <footer class="site-footer">© 2026 Wizarding Vixen. All rights reserved.</footer>
+
+</div>
+<!-- /container -->
+
+
+<!-- ================================================================
+     JavaScript — 탭 전환 / 레이더 차트 / 로그 파서 / NPC 배지 / 캘린더 / 사이드바
+     특별한 이유가 없다면 수정하지 않아도 됩니다.
+     ================================================================ -->
+<script>
+
+    /* ----------------------------------------------------------
+       탭 전환
+       openTab('섹션ID')          — 캐릭터 이미지 등 버튼 없이 호출
+       openTab('섹션ID', btn요소) — nav 버튼 클릭 시 활성화 표시 포함
+       ---------------------------------------------------------- */
+    function openTab(tabName, btnElement = null) {
+        document.querySelectorAll('.content-card').forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.character-section').forEach(e => e.classList.remove('active'));
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+        const target = document.getElementById(tabName);
+        if (target) target.classList.add('active');
+        if (tabName == "home" || tabName.includes("char-")) document.querySelectorAll('.character-section').forEach(e => e.classList.add('active'));
+        if (btnElement) btnElement.classList.add('active');
+    }
+
+
+    /* ----------------------------------------------------------
+       레이더 차트 (8각형 — CoC 7판)
+       data-stats 순서: 근력, 건강, 크기, 민첩, 외모, 지능, 정신, 교육
+       꼭짓점에 마우스를 올리면 항목명과 수치가 표시됩니다.
+       ---------------------------------------------------------- */
+    function drawAllRadarCharts() {
+        const labels = ["근력", "건강", "크기", "민첩", "외모", "지능", "정신", "교육"];
+        const SIDES  = 8;
+        const STEP   = (Math.PI * 2) / SIDES;
+        const CX = 100, CY = 100, R = 75;
+
+        document.querySelectorAll('.stats-wrapper').forEach(wrapper => {
+            const stats    = (wrapper.dataset.stats || "50,50,50,50,50,50,50,50").split(',').map(Number);
+            const colorRGB = wrapper.dataset.color || "61, 90, 97";
+
+            const bgEl   = wrapper.querySelector('.chart-background');
+            const polyEl = wrapper.querySelector('.chart-polygon');
+            const dotsEl = wrapper.querySelector('.chart-dots');
+            const lblEl  = wrapper.querySelector('.chart-labels');
+            const tipEl  = wrapper.querySelector('.chart-tooltip');
+            if (!bgEl || !polyEl || !lblEl) return;
+
+            // 배경 그리드
+            let gridHTML = "";
+            for (let lv = 1; lv <= 5; lv++) {
+                let pts = "";
+                const r = (R / 5) * lv;
+                for (let i = 0; i < SIDES; i++) {
+                    pts += `${CX + r * Math.cos(i * STEP - Math.PI/2)},${CY + r * Math.sin(i * STEP - Math.PI/2)} `;
+                }
+                gridHTML += `<polygon points="${pts}" class="${lv === 5 ? 'grid-line-outer' : 'grid-line'}"></polygon>`;
+            }
+
+            // 축선 & 레이블
+            let axisHTML = "", labelHTML = "";
+            for (let i = 0; i < SIDES; i++) {
+                const angle = i * STEP - Math.PI / 2;
+                const ex = CX + R * Math.cos(angle), ey = CY + R * Math.sin(angle);
+                axisHTML  += `<line x1="${CX}" y1="${CY}" x2="${ex}" y2="${ey}" class="axis-line"></line>`;
+                const lx = CX + (R + 14) * Math.cos(angle), ly = CY + (R + 14) * Math.sin(angle);
+                labelHTML += `<text x="${lx}" y="${ly}" class="chart-label">${labels[i]}</text>`;
+            }
+            bgEl.innerHTML  = gridHTML + axisHTML;
+            lblEl.innerHTML = labelHTML;
+
+            // 데이터 폴리곤 + 꼭짓점
+            let pts = "", dotsHTML = "";
+            for (let i = 0; i < SIDES; i++) {
+                const r = (stats[i] / 100) * R;
+                const x = CX + r * Math.cos(i * STEP - Math.PI/2);
+                const y = CY + r * Math.sin(i * STEP - Math.PI/2);
+                pts += `${x},${y} `;
+                dotsHTML += `
+                    <circle cx="${x}" cy="${y}" r="3" fill="rgb(${colorRGB})" stroke="white" stroke-width="1"></circle>
+                    <circle cx="${x}" cy="${y}" r="10" fill="transparent" class="chart-dot-hit"
+                        data-label="${labels[i]}" data-value="${stats[i]}" data-x="${x}" data-y="${y}"></circle>`;
+            }
+            polyEl.setAttribute("points", pts);
+            polyEl.style.fill   = `rgba(${colorRGB}, 0.5)`;
+            polyEl.style.stroke = `rgb(${colorRGB})`;
+            if (dotsEl) dotsEl.innerHTML = dotsHTML;
+
+            // 툴팁 이벤트
+            if (!tipEl) return;
+            const tipBg   = tipEl.querySelector('.tooltip-bg');
+            const tipText = tipEl.querySelector('.tooltip-text');
+
+            wrapper.querySelectorAll('.chart-dot-hit').forEach(hit => {
+                hit.addEventListener('mouseenter', () => {
+                    const lbl = hit.dataset.label, val = hit.dataset.value;
+                    const hx  = parseFloat(hit.dataset.x), hy = parseFloat(hit.dataset.y);
+                    const boxW = (lbl.length + val.length + 1) * 6.5 + 10, boxH = 16;
+                    let tx = hx + 6, ty = hy - boxH - 4;
+                    if (tx + boxW > 195) tx = hx - boxW - 6;
+                    if (ty < 2) ty = hy + 6;
+                    tipText.textContent = `${lbl} ${val}`;
+                    tipBg.setAttribute('x', tx);   tipBg.setAttribute('y', ty);
+                    tipBg.setAttribute('width', boxW); tipBg.setAttribute('height', boxH);
+                    tipText.setAttribute('x', tx + boxW / 2);
+                    tipText.setAttribute('y', ty + boxH / 2);
+                    tipEl.style.display = 'block';
+                });
+                hit.addEventListener('mouseleave', () => { tipEl.style.display = 'none'; });
+            });
+        });
+    }
+
+
+    /* ----------------------------------------------------------
+       로그 파서 — [main] 태그 인식 (코코포리아 출력 형식)
+       형식: [main] 이름 : 대사내용
+
+       캐릭터 색상 추가: "이름": "#색상코드" 형식으로 추가하세요.
+       ---------------------------------------------------------- */
+    async function parseAllLogs() {
+        // ↓ 캐릭터별 이름 색상, 로그 내의 이름과 띄어쓰기까지 동일해야 인식합니다
+        const charColors = {
+        "후지모리 시엔"   : "#4d9c29",
+        "사츠키"   : "#34610a",
+        "카라카미 텟세이"   : "#1b3106",
+        "히마리"   : "#294d0b",
+        "GM"     : "#555555",
+        "system" : "#494949"
+        };
+        
+        const containers = document.querySelectorAll('.details-content');
+
+        for (const container of containers) {
+
+            // data-file 속성에서 파일 경로 가져오기
+            const filePath = container.getAttribute('data-file');
+            if (!filePath) continue;
+
+            try {
+                const response = await fetch(filePath);
+                if (!response.ok) throw new Error('파일 로드 실패');
+                
+                const raw = await response.text();
+
+                // --- 스타일링 ---
+                const lines = raw.split('\n');              //로그 줄 단위로 나누기
+                let html = "";
+
+                lines.forEach(line => {
+                    const cleanLine = line.replace(/^.*?\[.*?\]\s*/, ''); // [main] 등 태그 제거
+
+                    const dividerIndex = cleanLine.indexOf(':'); // 줄에서 첫 번째 ":" 위치 찾기
+                    
+                    if (dividerIndex !== -1) { // 콜론이 존재하는 줄만 처리
+                        const name = cleanLine.substring(0, dividerIndex).trim();
+                        const content = cleanLine.substring(dividerIndex + 1).trim();
+                        
+                        if (name && content) { // 이름과 내용이 둘 다 존재할 때만 추가
+                            if (name == "GM") {
+                                html += `<div class="log-item">
+                                    <span class="narration">${content}</span>
+                                </div>`;
+                            }
+                            else {
+                                html += `<div class="log-item">
+                                    <b class="log-name" style="color:${charColors[name] || '#636363'}">${name}</b>
+                                    <span class="msg-text">${content}</span>
+                                </div>`;
+                            }
+                        }
+                    }
+                });
+                
+                if (html) container.innerHTML = html;
+
+            } catch (error) {                               // handle exception
+
+            console.error(`${filePath} 불러오기 실패:`, error);
+            container.innerHTML = `<p style="color:red;">${filePath}라는 이름의 파일이 존재하지 않습니다.</p>`;
+            }
+    
+        }
+    }
+
+
+    /* ----------------------------------------------------------
+       NPC 카드 관계 배지 자동 생성
+       새 유형 추가: colorMap에 "유형명": { bg, text } 추가
+       ---------------------------------------------------------- */
+    function buildRelationBadges() {
+        const colorMap = {
+            "적"    : { bg: "#7b1111", text: "#ffdada" },
+            "아군"  : { bg: "#1a4d2e", text: "#d4f7e0" },
+            "중립"  : { bg: "#3a3a3a", text: "#cccccc" },
+            "의뢰인": { bg: "#0d2d5e", text: "#cce0ff" }
+        };
+        document.querySelectorAll('.relation-card[data-relation]').forEach(card => {
+            const rel   = card.dataset.relation;
+            const style = colorMap[rel];
+            if (!style) return;
+            const badge = document.createElement('span');
+            badge.className     = 'relation-badge';
+            badge.textContent   = rel;
+            badge.style.cssText = `background:${style.bg}; color:${style.text};`;
+            card.prepend(badge);
+        });
+    }
+
+
+    /* ----------------------------------------------------------
+       캘린더
+       일정 추가: events 객체에 아래 형식으로 입력하세요.
+         "YYYY-MM-DD": ["일정 이름", "시간"]
+       ---------------------------------------------------------- */
+    function buildCalendar() {
+        // ↓ 일정을 여기에 추가하세요
+        const events = {
+            "2026-05-14": ["세션 3", "20:00"],
+            "2026-05-28": ["세션 4", "20:00"]
+        };
+
+        const el = document.getElementById('calendar');
+        if (!el) return;
+
+        const DOW = ["일","월","화","수","목","금","토"];
+        let current = new Date();
+
+        function render() {
+            const year     = current.getFullYear();
+            const month    = current.getMonth();
+            const today    = new Date();
+            const firstDay = new Date(year, month, 1).getDay();
+            const lastDate = new Date(year, month + 1, 0).getDate();
+
+            let dayCells = "";
+            for (let i = 0; i < firstDay; i++) {
+                dayCells += `<div class="cal-day empty"></div>`;
+            }
+            for (let d = 1; d <= lastDate; d++) {
+                const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+                const isToday = d === today.getDate() && month === today.getMonth() && year === today.getFullYear();
+                const ev      = events[dateStr];
+                const tooltip = ev ? `<span class="cal-tooltip">${ev[0]}<br>${ev[1]}</span>` : "";
+                dayCells += `<div class="cal-day ${isToday ? 'today' : ''} ${ev ? 'has-event' : ''}">${d}${tooltip}</div>`;
+            }
+
+            el.innerHTML = `
+                <div class="cal-header">
+                    <div class="cal-year">${year}</div>
+                    <div class="cal-nav">
+                        <button id="cal-prev">&lt;</button>
+                        <span class="cal-month">${String(month+1).padStart(2,'0')}</span>
+                        <button id="cal-next">&gt;</button>
+                    </div>
+                </div>
+                <div class="cal-grid">
+                    ${DOW.map(d => `<div class="cal-dow">${d}</div>`).join('')}
+                    ${dayCells}
+                </div>`;
+
+            document.getElementById('cal-prev').addEventListener('click', () => { current = new Date(year, month - 1, 1); render(); });
+            document.getElementById('cal-next').addEventListener('click', () => { current = new Date(year, month + 1, 1); render(); });
+        }
+
+        render();
+    }
+
+
+    /* ----------------------------------------------------------
+       모바일 사이드바 토글
+       ---------------------------------------------------------- */
+    function toggleSidebar() {
+        document.querySelector('.sidebar-column').classList.toggle('open');
+        document.querySelector('.sidebar-overlay').classList.toggle('active');
+    }
+
+
+    // 페이지 로드 시 모두 실행
+    window.addEventListener('load', () => {
+        drawAllRadarCharts();
+        parseAllLogs();
+        buildRelationBadges();
+        buildCalendar();
+        loadLogFiles();
+    });
+
+</script>
+</body>
+</html>
