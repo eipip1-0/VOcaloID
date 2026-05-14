@@ -576,6 +576,14 @@ details[open] summary::after { content: '−'; }
     word-break: break-all;
 }
 
+/* 개인 메시지 */
+.secret-msg {
+    color: #787878;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    word-break: break-all;
+}
+
 /* 나레이션 */
 .narration {
     font-style: italic;
@@ -586,6 +594,26 @@ details[open] summary::after { content: '−'; }
     text-align: center;
 }
 
+/* 시스템 메시지 */
+.system-msg {
+    font-weight: 600;
+    color: #787878;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    word-break: break-all;
+    text-align: center;
+}
+
+/* 기계음성 연출 */
+.device-msg {
+    font-family: 'Courier New', monospace;
+    color: #0da1f6;
+    font-weight: 550;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    word-break: break-all;
+    text-align: center;
+}
 
 /* =========================================
    8. NPC 관계 카드
